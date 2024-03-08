@@ -1,0 +1,24 @@
+<div class="infoActu">
+    <div class="infoActu-title">
+        <h2>{{this.infoActualite['actu_title']}}</h2>
+        <div class="info-title">
+            <h4>By: {{this.infoActualite['actu_author']}} | {{this.getDate(this.infoActualite['actu_datePublication'])}}
+            </h4>
+            <div class="share">
+                <a href=""><img src="/assets/icon-reseau/facebook-icon.svg" alt="Share on facebook"
+                        class="icon-small" /></a>
+                <a href=""><img src="/assets/icon-reseau/twitter-icon.svg" alt="Share on twitter"
+                        class="icon-small" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="infoActu-content">
+        <div class="content">
+            {{this.infoActualite['actu_content']}}
+        </div>
+        @if (this.infoActualite['actu_tiktok_link']) {
+            <app-tiktok [tikTokShortLink]="infoActualite['actu_tiktok_link']"></app-tiktok>
+        }
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="allActualite">
+    <h1>Les dernières actualités</h1>
+    @for (actualite of listActualite; track $index) {
+    <div class="actualite box" (click)="this.routerActualite(actualite['actu_id'])">
+        <h2 class="actualite-title">{{actualite['actu_title']}}</h2>
+        <h4>A été publiés le {{this.getFullDate(actualite['actu_datePublication'])}}</h4>
+    </div>
+    }
+</div>

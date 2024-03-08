@@ -1,1 +1,345 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'src/color.less';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+    overflow-x: none;
+    background-color: @whiteblack;
+    color: white;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Madimi One";
+}
+
+/*-----COMMUN----*/
+.btn {
+    background-color: @whiteblack;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.icon {
+    height: 75px;
+}
+
+.icon-small {
+    height: 50px;
+}
+
+.main {
+    margin-top: 72px;
+    flex: 1;
+}
+
+.box {
+    background-color: @black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    width: max-content;
+    text-align: center;
+    box-shadow: 10px 10px black;
+}
+
+/*------NAVBAR------*/
+.navbar {
+    background-color: @black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    padding: 20px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .link {
+        max-width: 25%;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                list-style: none;
+                margin-left: 10px;
+                background-color: @whiteblack;
+                padding: 10px;
+                border-radius: 50px;
+                cursor: pointer;
+
+                a {
+                    text-decoration: none;
+                    color: @white;
+                }
+            }
+        }
+    }
+
+    .logo img {
+        height: 35px;
+    }
+}
+
+.footer {
+    background-color: @black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    margin: 0;
+    padding: 20px;
+    margin-top: auto;
+
+    .copyright {
+        color: @white;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .socialMedia {
+        display: flex;
+        flex-direction: row;
+
+        a {
+            margin-left: 20px;
+
+            img {
+                height: 40px;
+            }
+        }
+    }
+}
+
+.bandeau {
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: @red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 3px;
+    color: @white;
+    cursor: pointer;
+
+    .warning {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 25px;
+        }
+    }
+
+    .bandeau-close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 25px;
+        }
+    }
+}
+
+/*------HOME------*/
+.trailer {
+
+    video {
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+        width: 75vw;
+    }
+}
+
+.detail-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+
+    .detail-box {
+        background-color: @black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px 10px 20px;
+        border-radius: 15px;
+        width: max-content;
+        text-align: center;
+        box-shadow: 10px 10px black;
+    }
+}
+
+.more-title {
+    text-align: center;
+}
+
+.more {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    width: 98vw;
+
+    .more-box-title {
+        height: 75px;
+    }
+
+    .more-box {
+        background-color: @black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px 10px 20px;
+        border-radius: 15px;
+        width: max-content;
+        text-align: center;
+        width: 45%;
+        height: 530px;
+        margin-top: 10px;
+    }
+}
+
+.join {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    img {
+        cursor: pointer;
+    }
+}
+
+/*------ACTUALITE------*/
+
+.allActualite {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.actualite {
+    width: 50%;
+    cursor: pointer;
+    align-items: flex-start;
+
+    h2 {
+        margin: 0;
+    }
+
+    h4 {
+        color: @gray;
+    }
+}
+
+/*------INFOACTUALITE------*/
+
+.infoActu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .infoActu-title {
+        width: 50%;
+        background-color: @black;
+        padding: 50px;
+        padding-top: 0;
+
+        .info-title {
+            display: flex;
+            justify-content: space-between;
+
+            h4 {
+                color: @gray;
+            }
+        }
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .infoActu-content {
+        width: 50%;
+        background-color: @black;
+        padding: 50px;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        white-space: pre-line;
+        display: flex;
+    }
+}
+
+.tiktokFrame {
+    margin-left: 10px;
+    height: 100vh;
+    width: max-content;
+}
