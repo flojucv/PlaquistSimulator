@@ -1,1 +1,17 @@
-<p>info-patch works!</p>
+<div class="infoPatchNote">
+    <div class="infoPatchNote-title">
+        <h2><markdown [data]="this.getText(this.infoPatchNote['patchNote_title'])"></markdown></h2>
+        <div class="info-title">
+            <h4> By: {{ this.infoPatchNote["patchNote_author"] }} | {{
+                this.getDate(this.infoPatchNote["patchNote_datePublication"]) }} </h4>
+            <div class="share">
+                <a [href]="'https://www.facebook.com/share.php?u='+this.shareLink"><img src="/assets/icon-reseau/facebook-icon.svg" alt="Share on facebook" class="icon-small" /></a>
+                <a [href]="'http://www.twitter.com/share?url='+this.shareLink"><img src="/assets/icon-reseau/twitter-icon.svg" alt="Share on twitter" class="icon-small" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="infoPatchNote-content">
+        <div class="content"><markdown [data]="this.getText(this.infoPatchNote['patchNote_content'])"></markdown></div>
+    </div>
+</div>

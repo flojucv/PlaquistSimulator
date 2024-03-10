@@ -1,1 +1,9 @@
-<p>patch-notes works!</p>
+<div class="allPatchNote">
+    <h1>Les derniers patch notes</h1>
+    @for (patchNote of listPatchNote; track $index) {
+    <div class="patchNote box" (click)="this.routerActualite(patchNote['patchNote_id'])">
+        <h2 class="patchNote-title"><markdown [data]="this.getTextReplace(patchNote['patchNote_title'])"></markdown></h2>
+        <h4>A été publiés le {{this.getFullDate(patchNote['patchNote_datePublication'])}}</h4>
+    </div>
+    }
+</div>

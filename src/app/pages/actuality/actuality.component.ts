@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DatabaseService } from '../../services/database.service';
+import { MarkdownComponent, MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-actuality',
   standalone: true,
-  imports: [],
+  imports: [MarkdownComponent, MarkdownModule],
   templateUrl: './actuality.component.html',
   styleUrl: './actuality.component.less'
 })
@@ -32,5 +33,14 @@ export class ActualityComponent {
 
   routerActualite(routerActualite: string) {
     this.router.navigateByUrl(`/actualite/${routerActualite}`);
+  }
+
+  getText(text: string): string {
+    //return this.sanitizer.bypassSecurityTrustHtml(text.replaceAll(':Screws:', '<img src="/assets/icon-site/screws.png" alt="screws" class="emoji"/>'));
+    if(text != undefined) {
+      return text.replaceAll(':Screws:', '<img src="/assets/icon-site/screws.png" alt="screws" class="emoji"/>');
+    } else {
+      return '';
+    }
   }
 }

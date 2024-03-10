@@ -41,6 +41,11 @@ h6 {
     height: 50px;
 }
 
+.emoji {
+    height: 25px;
+    transform: translate(0, 20%);
+}
+
 .main {
     margin-top: 72px;
     flex: 1;
@@ -94,17 +99,17 @@ h6 {
                 padding: 10px;
                 border-radius: 50px;
                 cursor: pointer;
-
-                a {
-                    text-decoration: none;
-                    color: @white;
-                }
+                color: @white;
             }
         }
     }
 
     .logo img {
         height: 35px;
+    }
+
+    .menuHamburger {
+        display: none;
     }
 }
 
@@ -289,6 +294,7 @@ h6 {
     width: 50%;
     cursor: pointer;
     align-items: flex-start;
+    margin-bottom: 20px;
 
     h2 {
         margin: 0;
@@ -342,4 +348,192 @@ h6 {
     margin-left: 10px;
     height: 100vh;
     width: max-content;
+}
+
+/*---PATCHNOTE---*/
+.allPatchNote {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.patchNote {
+    width: 50%;
+    cursor: pointer;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    h2 {
+        margin: 0;
+    }
+
+    h4 {
+        color: @gray;
+    }
+}
+
+.infoPatchNote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .infoPatchNote-title {
+        width: 50%;
+        background-color: @black;
+        padding: 50px;
+        padding-top: 0;
+
+        .info-title {
+            display: flex;
+            justify-content: space-between;
+
+            h4 {
+                color: @gray;
+            }
+        }
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .infoPatchNote-content {
+        width: 50%;
+        background-color: @black;
+        padding: 50px;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        white-space: pre-line;
+        display: flex;
+    }
+}
+
+
+
+
+/*---TELEPHONE---*/
+@media screen and (max-width: 900px) {
+    .navbar {
+        width: 95vw;
+        z-index: 10000;
+
+        .menuHamburger {
+            display: block;
+
+            img {
+                height: 50px;
+            }
+        }
+
+        .link {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            margin-top: 70px;
+            max-width: 100vw;
+
+
+            ul {
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+
+                li {
+                    margin: 0;
+                    width: 100%;
+                    border-radius: 0;
+                    border-bottom: 1px solid @white;
+                }
+            }
+        }
+
+        .showMenu {
+            display: block;
+        }
+
+    }
+
+    .more {
+        .more-box {
+            width: 80%;
+            height: 100%;
+
+            img {
+                width: 80%;
+            }
+        }
+    }
+
+    .join {
+        a {
+            width: 80%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .bandeau {
+        height: auto;
+        text-align: center;
+    }
+
+    .actualite {
+        width: 75%;
+
+        .actualite-title {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .patchNote {
+        width: 75%;
+
+        .patchNote-title {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar {
+        width: 90vw;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .infoActu-title {
+        .info-title {
+            flex-direction: column;
+
+            .share {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    .infoPatchNote-title {
+        .info-title {
+            flex-direction: column;
+
+            .share {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
 }

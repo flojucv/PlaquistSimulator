@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './bandeau.component.less'
 })
 export class BandeauComponent {
-  public displayBandeau: Boolean = false;
+  public displayBandeau: Boolean = true;
 
   public closeBandeau() {
     this.displayBandeau = false;

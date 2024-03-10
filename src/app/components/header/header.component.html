@@ -2,11 +2,14 @@
     <div class="logo">
         <a href="/"><img src="/assets/icon-site/logo_plaquist.png" alt="Logo du jeux plaquist simulator" /></a>
     </div>
-    <div class="link">
+    <div class="menuHamburger" (click)="this.affichageMenu()">
+        <img src="/assets/icon-site/menuHamburger.png" alt="menu" />
+    </div>
+    <div class="link" id="menu">
         <ul>
-            <li><a href="/">Acceuil</a></li>
-            <li><a href="/actualites">Actualités</a></li>
-            <li><a href="/patch-notes">Patch Notes</a></li>
+            <li (click)="this.redirection('')">Acceuil</li>
+            <li (click)="this.redirection('actualites')">Actualités</li>
+            <li (click)="this.redirection('patch-notes')">Patch Notes</li>
         </ul>
     </div>
 </nav>

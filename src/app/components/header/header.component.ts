@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,4 +10,18 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  constructor(
+    private router: Router,
+  ) { }
+
+  public affichageMenu() {
+    const menu = window.document.getElementById('menu');
+
+    menu?.classList.toggle('showMenu');
+  }
+
+  public redirection(redirect: string) {
+    this.router.navigateByUrl(`/${redirect}`);
+    this.affichageMenu();
+  }
 }
